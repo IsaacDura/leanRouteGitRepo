@@ -38,6 +38,13 @@ public class LeanRouteCore<E> {
      public String test (@PathParam("test") String nombre){
       return "test "+nombre;
     }
+     
+       @GET //Indica el tipo del método que determina como se recibe la información en
+    @Path("/setAction/name={nombre}") //Ruta que se indica para llamar al método y la e
+    @Produces(MediaType.TEXT_XML)
+     public String setAction (@PathParam("setAction") String nombre){
+      return "setAction "+nombre;
+    }
     
     
 } 
